@@ -1,0 +1,10 @@
+<litepal>
+    <dbname value = "weatherapp" />
+    <version value = "1" />
+    <list>
+        <mapping class = "com.example.reese.weatherapp.db.Province" />
+        <mapping class = "com.example.reese.weatherapp.db.City" />
+        <mapping class = "com.example.reese.weatherapp.db.Country" />
+    </list>
+
+</litepal>
