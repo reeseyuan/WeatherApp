@@ -40,7 +40,7 @@ public class WeatherActivity extends AppCompatActivity {
     private TextView sportText;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {   //获取控件
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
 
