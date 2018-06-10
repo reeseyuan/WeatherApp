@@ -1,5 +1,6 @@
 package com.example.reese.weatherapp;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.reese.weatherapp.gson.Forecast;
 import com.example.reese.weatherapp.gson.Weather;
+import com.example.reese.weatherapp.service.AutoUpdateService;
 import com.example.reese.weatherapp.util.HttpUtil;
 import com.example.reese.weatherapp.util.Utility;
 
@@ -187,9 +189,11 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carwash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 
-    //记载Bing每日一图
+    //加载Bing每日一图
 
     private void loadBingPic() {
         String requestBingPic = "http://guolin.tech/api/bing_pic";
